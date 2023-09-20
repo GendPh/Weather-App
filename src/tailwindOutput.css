@@ -583,6 +583,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 19 30 / var(--tw-bg-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
