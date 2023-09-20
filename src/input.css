@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  header {
+    & li {
+      @apply active:scale-95 transition-all duration-100 ease-linear;
+
+      &.active {
+        @apply border-text border-2 rounded-lg;
+
+        & svg {
+          @apply text-text;
+        }
+      }
+
+      & svg {
+        @apply text-text-secondary;
+      }
+    }
+  }
+
+  svg {
+    @apply text-text;
+  }
+
+}
