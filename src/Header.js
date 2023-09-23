@@ -11,18 +11,19 @@ linksNavBar.forEach(link => {
 
 
 
+const mainInfo = document.querySelectorAll("#main-info > div")
 
-const mainInfoContainers = document.querySelectorAll("#day-info > div");
+gsap.from(mainInfo, { x: "-100%", opacity: 0, duration: 1, stagger: 3 })
+
+const dayInfo = document.querySelectorAll("#day-info > div");
 const cityInfo = document.querySelectorAll("#city-info > *");
-const forecastInfo = document.querySelectorAll("#forecast-info > *");
 const todayTemp = document.querySelectorAll("#today-temp > *");
 const airConditions = document.querySelectorAll("#air-conditions > div > div");
 
-gsap.from(mainInfoContainers, { x: "-100%", opacity: 0, duration: 1.5, stagger: 2 })
-
-gsap.from(cityInfo, { scaleY: 0, opacity: 0, duration: 0.5, stagger: .4, delay: 0.6 })
-
-gsap.from(todayTemp, { scale: 0, opacity: 0, duration: 0.3, stagger: 0.2, delay: 2.9 })
-
-gsap.from(airConditions, { x: -15, opacity: 0, duration: 1, stagger: 0.3, delay: 5 })
-
+gsap.from(dayInfo, { x: "-100%", opacity: 0, duration: 1, stagger: 1 })
+//1st second
+gsap.from(cityInfo, { scaleY: 0, opacity: 0, duration: 0.4, stagger: .2, delay: 0.4 })
+//2nd Second
+gsap.from(todayTemp, { scale: 0, opacity: 0, duration: 0.16, stagger: .16, delay: 1.1 })
+//3rd Second
+gsap.from(airConditions, { x: -15, opacity: 0, duration: 1, stagger: .25, delay: 2.1 })

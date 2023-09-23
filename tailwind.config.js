@@ -9,6 +9,10 @@ module.exports = {
         "background": "#0b131e",
         "background-secondary": "#202b3b",
         "button": "#35465e",
+      },
+      fontFamily: {
+        "title": ['Rufina', "sans-serif"],
+        "text": ['Oxygen', "serif"],
       }
     },
   },
