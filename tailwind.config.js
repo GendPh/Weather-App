@@ -16,6 +16,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         'body-2': 'minmax(0, 80px) minmax(0, 1fr)',
+      },
+      gridTemplateRows: {
+        'section-2': 'minmax(0, 50px) minmax(0, 1fr)',
       }
     },
   },

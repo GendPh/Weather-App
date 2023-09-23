@@ -7,10 +7,10 @@
 @layer utilities {
   header {
     & li {
-      @apply active:scale-95 transition-all duration-100 ease-linear;
+      @apply active:scale-75 transition-all duration-75 ease-linear;
 
       &.active {
-        @apply border-text border-2 rounded-lg;
+        @apply rounded-lg outline outline-offset-2 outline-1 outline-text;
 
         & svg {
           @apply text-text;
