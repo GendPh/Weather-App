@@ -8,10 +8,10 @@
   <title>Document</title>
 </head>
 
-<body class="bg-background p-5 grid grid-cols-1 gap-5">
+<body class="bg-background p-5 grid grid-cols-1 md:grid-cols-body-2 gap-5">
   <header class="bg-background-secondary rounded-md p-2">
     <nav>
-      <ul class="flex gap-5">
+      <ul class="flex gap-5 md:flex-col md:items-center">
         <li class="p-2 active"><a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -65,12 +65,13 @@
 
   <main>
     <section id="main-info" class="grid grid-cols-1">
-      <div id="day-info" class="opacity-0">
-        <div id="city-info" class="px-3 mb-2">
+      <!-- opacity-0 -->
+      <div id="day-info" class="opacity-1">
+        <div id="city-info" class="px-3 mb-3">
           <h1 class="font-title text-text capitalize text-xl font-bold"></h1>
           <h4 class="font-text text-text-secondary text-sm">Chance of rain <span id="chanceRain"></span></h4>
           <div class="flex justify-between items-center">
-            <h2 id="city-temp" class="font-title text-text uppercase text-2xl font-bold">32ºC</h2>
+            <h2 id="city-temp" class="font-text text-text uppercase text-2xl font-bold">32ºC</h2>
             <img id="city-icon" src="./public/icons/clear-day.svg" class="w-14 h-14" alt="city icon of the day">
           </div>
         </div>
@@ -110,58 +111,32 @@
           </div>
         </div>
         <div id="air-conditions" class="bg-background-secondary mb-2 rounded-md py-2 px-3">
-          <h2 class="text-text-secondary text-lg uppercase">air conditions</h2>
+          <h2 class="font-title text-text-secondary text-sm mb-1 capitalize">air conditions</h2>
           <div class="grid grid-cols-2 gap-4 mt-5">
             <div class="flex flex-col gap-3">
               <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-thermometer">
-                  <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
-                </svg>
+                <img src="./public/icons/thermometer.svg" class="w-6 h-6" alt="Thermometer Icon">
                 <p class="font-text text-sm text-text-secondary">Real Feal</p>
               </div>
               <p class="font-text text-text uppercase font-bold tracking-widest text-lg">25º</p>
             </div>
             <div class="flex flex-col gap-3">
               <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-wind">
-                  <path
-                    d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2">
-                  </path>
-                </svg>
+                <img src="./public/icons/windSpeed.svg" class="w-6 h-6" alt="Wind Speed Icon">
                 <p class="font-text text-sm text-text-secondary">Wind</p>
               </div>
               <p class="font-text text-text font-bold tracking-widest text-lg">0.2km/h</p>
             </div>
             <div class="flex flex-col gap-3">
               <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-droplet">
-                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
-                </svg>
+                <img src="./public/icons/raindrops.svg" class="w-8 h-w-8" alt="Rain Drops Icon">
                 <p class="font-text text-sm text-text-secondary">Rain</p>
               </div>
               <p class="font-text text-text uppercase font-bold tracking-widest text-lg">0%</p>
             </div>
             <div class="flex flex-col gap-3">
               <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
+                <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Sun Icon">
                 <p class="font-text text-sm text-text-secondary">UV Index</p>
               </div>
               <p class="font-text text-text uppercase font-bold tracking-widest text-lg">3</p>
@@ -169,157 +144,95 @@
           </div>
         </div>
       </div>
-      <div id="seven-day-forecast" class="bg-background-secondary rounded-md py-2 px-3 opacity-0">
+      <!-- opacity-0 -->
+      <div class="bg-background-secondary rounded-md py-2 px-3 opacity-1">
         <h2 class="text-text-secondary text-lg uppercase">7-day-forecast</h2>
-        <div>
-
+        <div id="seven-day-forecast">
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Today</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Tue</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Wen</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Thu</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Fri</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Sat</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary">Sun</h3>
-            <div class="flex gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <h3 class="font-title uppercase text-text-secondary">Tod</h3>
+            <div class="conditions flex gap-x-2">
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
 
               <p class="font-text text-text capitalize">Sunny</p>
             </div>
-            <p class="font-text text-text">36/<span class="text-text-secondary">26</span></p>
+            <div class="max-min-temp flex">
+              <p class="min-temp font-text text-text-secondary">12</p>
+              <p class="max-temp font-text text-text">12</p>
+            </div>
           </div>
+
 
         </div>
       </div>

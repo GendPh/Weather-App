@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         "title": ['Rufina', "sans-serif"],
         "text": ['Oxygen', "serif"],
+      },
+      gridTemplateColumns: {
+        'body-2': 'minmax(0, 80px) minmax(0, 1fr)',
       }
     },
   },
