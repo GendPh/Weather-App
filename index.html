@@ -65,27 +65,13 @@
 
   <main>
     <section id="main-info" class="grid grid-cols-1">
-      <div id="day-info">
+      <div id="day-info" class="opacity-0">
         <div id="city-info" class="px-3 mb-2">
-          <h1 class="font-title text-text capitalize text-xl font-bold">Vila Nova Famalicão</h1>
-          <h4 class="font-text text-text-secondary text-sm">Chance of rain <span id="chanceRain">0%</span></h4>
+          <h1 class="font-title text-text capitalize text-xl font-bold"></h1>
+          <h4 class="font-text text-text-secondary text-sm">Chance of rain <span id="chanceRain"></span></h4>
           <div class="flex justify-between items-center">
-            <h2 id="temp" class="font-title text-text uppercase text-2xl font-bold">32ºC</h2>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-sun text-yellow-400">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-
+            <h2 id="city-temp" class="font-title text-text uppercase text-2xl font-bold">32ºC</h2>
+            <img id="city-icon" src="./public/icons/clear-day.svg" class="w-14 h-14" alt="city icon of the day">
           </div>
         </div>
         <div id="forecast-info" class="bg-background-secondary mb-2 rounded-md py-2 px-3">
@@ -93,116 +79,32 @@
           <div id="today-temp" class="grid grid-cols-3 gap-y-2">
             <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
               <p class="font-text text-text-secondary uppercase text-sm">6:00 AM</p>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-              </div>
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="6 AM icon">
               <p class="font-text text-text uppercase text-lg">25º</p>
             </div>
             <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
-              <p class="font-text text-text-secondary uppercase text-sm">6:00 AM</p>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-              </div>
+              <p class="font-text text-text-secondary uppercase text-sm">9:00 AM</p>
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="9 AM icon">
               <p class="font-text text-text uppercase text-lg">25º</p>
             </div>
             <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
-              <p class="font-text text-text-secondary uppercase text-sm">6:00 AM</p>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-              </div>
+              <p class="font-text text-text-secondary uppercase text-sm">12:00 AM</p>
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="12 AM icon">
               <p class="font-text text-text uppercase text-lg">25º</p>
             </div>
             <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
-              <p class="font-text text-text-secondary uppercase text-sm">6:00 AM</p>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-              </div>
+              <p class="font-text text-text-secondary uppercase text-sm">16:00 PM</p>
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="16 AM icon">
               <p class="font-text text-text uppercase text-lg">25º</p>
             </div>
             <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
-              <p class="font-text text-text-secondary uppercase text-sm">6:00 AM</p>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-              </div>
+              <p class="font-text text-text-secondary uppercase text-sm">19:00 PM</p>
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="19 AM icon">
               <p class="font-text text-text uppercase text-lg">25º</p>
             </div>
             <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
-              <p class="font-text text-text-secondary uppercase text-sm">6:00 AM</p>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-sun">
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-              </div>
+              <p class="font-text text-text-secondary uppercase text-sm">22:00 PM</p>
+              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="22 AM icon">
               <p class="font-text text-text uppercase text-lg">25º</p>
             </div>
           </div>
@@ -267,7 +169,7 @@
           </div>
         </div>
       </div>
-      <div id="seven-day-forecast" class="bg-background-secondary rounded-md py-2 px-3">
+      <div id="seven-day-forecast" class="bg-background-secondary rounded-md py-2 px-3 opacity-0">
         <h2 class="text-text-secondary text-lg uppercase">7-day-forecast</h2>
         <div>
 
@@ -427,6 +329,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script type="module" src="./src/Api/cityWeather.js"></script>
   <script src="./src/Header.js"></script>
 
 </body>
