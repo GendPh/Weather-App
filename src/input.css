@@ -68,6 +68,8 @@
   }
 
   .forecast-day-container {
+    @apply h-[100%] flex flex-col justify-evenly;
+
     .day-container {
       @apply flex items-center justify-between py-2 border-text-secondary border-b-2;
 

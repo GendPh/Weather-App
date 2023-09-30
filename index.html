@@ -37,7 +37,7 @@
   <main>
     <section id="main-info" class="container active">
       <div id="day-info" class="flex-1 opacity-0 flex flex-col justify-evenly gap-y-3">
-        <div id="city-info" class="p-3 flex-1 flex flex-col justify-evenly">
+        <article id="city-info" class="p-3 flex-1 flex flex-col justify-evenly">
           <div>
             <h1 class="font-title text-text capitalize text-xl md:text-4xl font-bold">City Name</h1>
             <h4 class="font-text text-text-secondary text-sm md:text-xl">Chance of rain <span id="chanceRain">0</span>
@@ -48,36 +48,31 @@
             <img id="city-icon" src="./public/icons/clear-day.svg" class="w-14 h-14 md:w-32 md:h-32"
               alt="city icon of the day">
           </div>
-        </div>
-        <div id="forecast-info" class="bg-background-secondary rounded-md p-3">
+        </article>
+        <article id="forecast-info" class="bg-background-secondary rounded-md p-3">
           <h3>Today's forecast</h3>
           <div id="today-temp" class="today-temp-container six-hours">
-            <div
-              class="temp-container">
+            <div class="temp-container">
               <p class="temp-hour">6:00 AM</p>
               <img src="./public/icons/clear-day.svg" alt="6 AM icon">
               <p class="temp">25º</p>
             </div>
-            <div
-              class="temp-container">
+            <div class="temp-container">
               <p class="temp-hour">9:00 AM</p>
               <img src="./public/icons/clear-day.svg" alt="9 AM icon">
               <p class="temp">25º</p>
             </div>
-            <div
-              class="temp-container">
+            <div class="temp-container">
               <p class="temp-hour">12:00 AM</p>
               <img src="./public/icons/clear-day.svg" alt="12 AM icon">
               <p class="temp">25º</p>
             </div>
-            <div
-              class="temp-container">
+            <div class="temp-container">
               <p class="temp-hour">16:00 PM</p>
               <img src="./public/icons/clear-day.svg" alt="16 AM icon">
               <p class="temp">25º</p>
             </div>
-            <div
-              class="temp-container">
+            <div class="temp-container">
               <p class="temp-hour">19:00 PM</p>
               <img src="./public/icons/clear-day.svg" alt="19 AM icon">
               <p class="temp">25º</p>
@@ -88,8 +83,8 @@
               <p class="temp">25º</p>
             </div>
           </div>
-        </div>
-        <div id="air-conditions" class="bg-background-secondary rounded-md p-3">
+        </article>
+        <article id="air-conditions" class="bg-background-secondary rounded-md p-3">
           <h2 class="font-title text-text-secondary text-sm md:text-xl mb-2 capitalize">air conditions</h2>
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4 mt-5">
             <div class="flex flex-col gap-3">
@@ -121,93 +116,87 @@
               <p class="font-text text-text uppercase font-bold tracking-widest text-lg md:text-2xl">3</p>
             </div>
           </div>
-        </div>
+        </article>
       </div>
-      <div class="flex-1 bg-background-secondary rounded-md p-3 opacity-0">
+      <div id="seven-day-forecast" class="flex-1 bg-background-secondary rounded-md p-3 opacity-0">
         <h2 class="text-text-secondary text-sm md:text-xl capitalize">7-day-forecast</h2>
-        <div id="seven-day-forecast" class="h-[100%] flex flex-col justify-evenly">
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
+        <!--<div class="h-[100%] flex flex-col justify-evenly">  -->
+        <div class="forecast-day-container">
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
             </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
-            </div>
-          </div>
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
-            </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
             </div>
           </div>
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
             </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
-            </div>
-          </div>
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
-            </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
             </div>
           </div>
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
             </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
-            </div>
-          </div>
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
-            </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
             </div>
           </div>
-          <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
-            <h3 class="font-title uppercase text-text-secondary md:text-xl">Tod</h3>
-            <div class="conditions flex gap-x-2">
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="Day condition icon">
-
-              <p class="font-text text-text md:text-xl capitalize">Sunny</p>
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
             </div>
-            <div class="max-min-temp flex">
-              <p class="min-temp font-text text-text-secondary md:text-lg">12</p>
-              <p class="max-temp font-text text-text md:text-xl">12</p>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
+            </div>
+          </div>
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
+            </div>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
+            </div>
+          </div>
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
+            </div>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
+            </div>
+          </div>
+          <div class="day-container">
+            <h4 class="forecast-day">Tod</h4>
+            <div class="day-conditions">
+              <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+              <p class="condition">Sunny</p>
+            </div>
+            <div class="max-min-temp">
+              <p class="min-temp">12/</p>
+              <p class="max-temp">12</p>
             </div>
           </div>
         </div>

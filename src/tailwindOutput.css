@@ -791,7 +791,11 @@ video {
   }
 }
 
-.forecast-day-container {
+.forecast-day-container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
   .day-container{
     display: flex;
   }
@@ -1830,10 +1834,6 @@ svg{
     align-items: center;
   }
 
-  .md\:border-r-0{
-    border-right-width: 0px;
-  }
-
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1875,10 +1875,5 @@ svg{
 
   .lg\:overflow-hidden{
     overflow: hidden;
-  }
-
-  .lg\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }

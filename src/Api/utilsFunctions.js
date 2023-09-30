@@ -29,25 +29,32 @@ export function airCondition(temp, windSpeed, rainPer, uvIndex) {
 }
 
 const getDayWeeK = (datetime) => {
-  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const dateStr = datetime;
   const date = new Date(dateStr);
   const dayOfWeekNumber = date.getDay();
-  return daysOfWeek[dayOfWeekNumber];
+  return dayOfWeekNumber;
 }
 
 export function sevenDayForecast(array) {
-  const sevenDayForecastDay = document.querySelectorAll("#seven-day-forecast > div > h3");
-  const sevenDayForecastImg = document.querySelectorAll("#seven-day-forecast > div > .conditions > img");
-  const sevenDayForecastCondition = document.querySelectorAll("#seven-day-forecast > div > .conditions > p");
-  const sevenDayForecastTempMin = document.querySelectorAll(".min-temp");
-  const sevenDayForecastTempMax = document.querySelectorAll(".max-temp");
+  const sevenDayForecastDay = document.querySelectorAll("#seven-day-forecast .day-container");
+  const forecastDay = document.querySelectorAll("#seven-day-forecast .forecast-day")
+  const sevenDayForecastImg = document.querySelectorAll("#seven-day-forecast  .day-conditions img");
+  const sevenDayForecastCondition = document.querySelectorAll("#seven-day-forecast  .day-conditions .condition");
+  const sevenDayForecastTempMin = document.querySelectorAll("#seven-day-forecast .max-min-temp .min-temp");
+  const sevenDayForecastTempMax = document.querySelectorAll("#seven-day-forecast .max-min-temp .max-temp");
+
+
 
   let date = array[0].datetime;
+  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   let weekDay = getDayWeeK(date);
 
   sevenDayForecastDay.forEach((day, index) => {
-    (index == 0 ? day.textContent = "Tod" : day.textContent = weekDay)
+    if (weekDay == daysOfWeek.length) {
+      weekDay = 0
+    }
+    (index == 0 ? forecastDay[0].textContent = "Tod" : forecastDay[index].textContent = daysOfWeek[weekDay]);
+    weekDay++;
     sevenDayForecastImg[index].src = imgAddress(array[index].icon)
     sevenDayForecastCondition[index].textContent = array[index].conditions;
     sevenDayForecastTempMin[index].textContent = array[index].tempmin + "/";

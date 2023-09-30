@@ -1,8 +1,8 @@
 import { fetchApi } from "./fetchApi.js";
 import { placeCityInfo, todayForecast, airCondition, sevenDayForecast, cityWeatherAnimation } from "./utilsFunctions.js";
 
-const getCityWeather = async () => {
-  let cityWeather = await fetchApi("vila nova famalicão");
+const getCityWeather = async (city) => {
+  let cityWeather = await fetchApi(city);
 
   let cityName = cityWeather.address;
   let cityRainPer = cityWeather.currentConditions.precipprob;
@@ -24,4 +24,4 @@ const getCityWeather = async () => {
 
 
 
-getCityWeather();
+getCityWeather("Vila Nova Famalicão");
