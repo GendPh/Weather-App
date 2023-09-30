@@ -8,65 +8,35 @@
   <title>Document</title>
 </head>
 
-<body class="min-h-screen bg-background p-5 grid grid-cols-1 md:grid-cols-body-2 lg:overflow-hidden gap-5">
-  <header class="bg-background-secondary rounded-md p-2">
-    <nav class="sticky top-2">
-      <ul class="flex gap-5 md:flex-col md:items-center">
-        <li class="p-2 active"><a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-sun">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </a></li>
-        <li class="p-2"><a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-map-pin">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </a></li>
-        <li class="p-2"><a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-map">
-              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-              <line x1="8" y1="2" x2="8" y2="18"></line>
-              <line x1="16" y1="6" x2="16" y2="22"></line>
-            </svg>
-          </a></li>
-        <li class="p-2"><a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-sliders">
-              <line x1="4" y1="21" x2="4" y2="14"></line>
-              <line x1="4" y1="10" x2="4" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12" y2="3"></line>
-              <line x1="20" y1="21" x2="20" y2="16"></line>
-              <line x1="20" y1="12" x2="20" y2="3"></line>
-              <line x1="1" y1="14" x2="7" y2="14"></line>
-              <line x1="9" y1="8" x2="15" y2="8"></line>
-              <line x1="17" y1="16" x2="23" y2="16"></line>
-            </svg>
-          </a></li>
-      </ul>
+<body
+  class="min-h-screen lg:overflow-hidden bg-background p-5 grid grid-cols-1 grid-rows-section-2 md:grid-rows-1 md:grid-cols-body-2  gap-5">
+  <header class="bg-background-secondary rounded-md p-2 h-fit md:h-[100%]">
+    <nav class="sticky top-2 flex gap-5 md:flex-col md:items-center">
+      <button type="button" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="feather feather-sun">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg></button>
+      <button type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-map-pin">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg></button>
     </nav>
   </header>
 
   <main>
-    <section id="main-info" class="h-[100%] grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-2">
-      <!-- opacity-0 -->
-      <div id="day-info" class="opacity-0 flex flex-col justify-evenly gap-y-3">
+    <section id="main-info" class="container active">
+      <div id="day-info" class="flex-1 opacity-0 flex flex-col justify-evenly gap-y-3">
         <div id="city-info" class="p-3 flex-1 flex flex-col justify-evenly">
           <div>
             <h1 class="font-title text-text capitalize text-xl md:text-4xl font-bold">City Name</h1>
@@ -80,42 +50,42 @@
           </div>
         </div>
         <div id="forecast-info" class="bg-background-secondary rounded-md p-3">
-          <h2 class="font-title text-text-secondary text-sm md:text-xl mb-2">Today's forecast</h2>
-          <div id="today-temp" class="grid grid-cols-3 md:grid-cols-6 gap-y-2">
+          <h3>Today's forecast</h3>
+          <div id="today-temp" class="today-temp-container six-hours">
             <div
-              class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2 md:border-r-0">
-              <p class="font-text text-text-secondary uppercase text-sm md:text-md lg:text-sm">6:00 AM</p>
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="6 AM icon">
-              <p class="font-text text-text uppercase text-lg">25º</p>
+              class="temp-container">
+              <p class="temp-hour">6:00 AM</p>
+              <img src="./public/icons/clear-day.svg" alt="6 AM icon">
+              <p class="temp">25º</p>
             </div>
             <div
-              class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2 md:border-r-0">
-              <p class="font-text text-text-secondary uppercase text-sm md:text-md lg:text-sm">9:00 AM</p>
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="9 AM icon">
-              <p class="font-text text-text uppercase text-lg">25º</p>
+              class="temp-container">
+              <p class="temp-hour">9:00 AM</p>
+              <img src="./public/icons/clear-day.svg" alt="9 AM icon">
+              <p class="temp">25º</p>
             </div>
             <div
-              class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2 md:border-r-0">
-              <p class="font-text text-text-secondary uppercase text-sm md:text-md lg:text-sm">12:00 AM</p>
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="12 AM icon">
-              <p class="font-text text-text uppercase text-lg">25º</p>
+              class="temp-container">
+              <p class="temp-hour">12:00 AM</p>
+              <img src="./public/icons/clear-day.svg" alt="12 AM icon">
+              <p class="temp">25º</p>
             </div>
             <div
-              class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2 md:border-r-0">
-              <p class="font-text text-text-secondary uppercase text-sm md:text-md lg:text-sm">16:00 PM</p>
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="16 AM icon">
-              <p class="font-text text-text uppercase text-lg">25º</p>
+              class="temp-container">
+              <p class="temp-hour">16:00 PM</p>
+              <img src="./public/icons/clear-day.svg" alt="16 AM icon">
+              <p class="temp">25º</p>
             </div>
             <div
-              class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2 md:border-r-0">
-              <p class="font-text text-text-secondary uppercase text-sm md:text-md lg:text-sm">19:00 PM</p>
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="19 AM icon">
-              <p class="font-text text-text uppercase text-lg">25º</p>
+              class="temp-container">
+              <p class="temp-hour">19:00 PM</p>
+              <img src="./public/icons/clear-day.svg" alt="19 AM icon">
+              <p class="temp">25º</p>
             </div>
-            <div class="flex flex-col justify-between items-center gap-2 border-text-secondary border-x-2">
-              <p class="font-text text-text-secondary uppercase text-sm md:text-md lg:text-sm">22:00 PM</p>
-              <img src="./public/icons/clear-day.svg" class="w-6 h-6" alt="22 AM icon">
-              <p class="font-text text-text uppercase text-lg">25º</p>
+            <div class="temp-container">
+              <p class="temp-hour">22:00 PM</p>
+              <img src="./public/icons/clear-day.svg" alt="22 AM icon">
+              <p class="temp">25º</p>
             </div>
           </div>
         </div>
@@ -153,8 +123,7 @@
           </div>
         </div>
       </div>
-      <!-- opacity-0 -->
-      <div class="bg-background-secondary rounded-md p-3 opacity-0">
+      <div class="flex-1 bg-background-secondary rounded-md p-3 opacity-0">
         <h2 class="text-text-secondary text-sm md:text-xl capitalize">7-day-forecast</h2>
         <div id="seven-day-forecast" class="h-[100%] flex flex-col justify-evenly">
           <div class="flex items-center justify-between py-2 border-text-secondary border-b-2">
@@ -244,6 +213,93 @@
         </div>
       </div>
     </section>
+    <section id="choose-city" class="container">
+      <div id="cities" class="lg:flex-1 max-h-[250px] md:max-h-[45vh] lg:max-h-[95vh] overflow-scroll ">
+        <template data-cityContainer>
+          <div class="city-container">
+            <img src="./public/icons/clear-day.svg" alt="sun" class="w-14 h-14">
+            <div>
+              <h2 class="city-name text-center">Vila Nova Famalicão</h2>
+              <h3 class="city-time text-center">10:23:00</h3>
+            </div>
+            <h2 class="city-temp">30º</h2>
+          </div>
+        </template>
+      </div>
+      <div id="city-small-info"
+        class="lg:flex-1 md:h-[100%] bg-background-secondary rounded-md p-5 flex flex-col justify-between">
+        <div class="flex items-center justify-between border-b border-text-secondary pb-2">
+          <div class="text-text">
+            <h2 class="text-3xl">Madrid</h2>
+            <h4>Chance of rain: <span>0%</span></h4>
+            <h2>31º</h2>
+          </div>
+          <img src="./public/icons/clear-day.svg" alt="clear-day" class="w-10 h-10">
+        </div>
+
+        <article>
+          <h3>Today's Forecast</h3>
+          <div class="today-temp-container">
+            <div class="temp-container">
+              <p class="temp-hour">6:00 AM</p>
+              <img src="./public/icons/clear-day.svg" alt="6 AM icon">
+              <p class="temp">25º</p>
+            </div>
+            <div class="temp-container">
+              <p class="temp-hour">9:00 AM</p>
+              <img src="./public/icons/clear-day.svg" alt="9 AM icon">
+              <p class="temp">25º</p>
+            </div>
+            <div class="temp-container">
+              <p class="temp-hour">12:00 AM</p>
+              <img src="./public/icons/clear-day.svg" alt="12 AM icon">
+              <p class="temp">25º</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <h3>3-day Forecast</h3>
+
+          <div class="forecast-day-container">
+            <div class="day-container">
+              <h4>Tod</h4>
+              <div class="day-conditions">
+                <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+                <p>Sunny</p>
+              </div>
+              <div class="max-min-temp">
+                <p class="min-temp">12/</p>
+                <p class="max-temp">12</p>
+              </div>
+            </div>
+            <div class="day-container">
+              <h4>Tod</h4>
+              <div class="day-conditions">
+                <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+                <p>Sunny</p>
+              </div>
+              <div class="max-min-temp">
+                <p class="min-temp">12/</p>
+                <p class="max-temp">12</p>
+              </div>
+            </div>
+            <div class="day-container">
+              <h4>Tod</h4>
+              <div class="day-conditions">
+                <img src="./public/icons/clear-day.svg" alt="Day condition icon">
+                <p>Sunny</p>
+              </div>
+              <div class="max-min-temp">
+                <p class="min-temp">12/</p>
+                <p class="max-temp">12</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
   </main>
 
 
@@ -251,6 +307,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script type="module" src="./src/Api/cityWeather.js"></script>
   <script src="./src/Header.js"></script>
+  <script src="./src/CitiesChosen/Utils.js" type="module"></script>
 
 </body>
 

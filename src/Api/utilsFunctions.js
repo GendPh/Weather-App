@@ -1,4 +1,4 @@
-function imgAddress(image) {
+export function imgAddress(image) {
   return `./public/icons/${image}.svg`;
 }
 

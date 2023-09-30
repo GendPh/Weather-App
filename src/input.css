@@ -4,10 +4,116 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+
+  .container {
+    @apply h-[100%] hidden flex-col gap-4 lg:flex-row;
+
+    &.active {
+      @apply flex;
+    }
+  }
+
+  #cities::-webkit-scrollbar {
+    display: none;
+  }
+
+  .city-container {
+    @apply bg-background-secondary border-2 border-background-secondary flex items-center justify-between gap-2 p-4 mb-3 rounded-md cursor-pointer transition-all duration-75 ease-linear active:opacity-90 active:scale-90;
+
+    .city-name {
+      @apply relative flex items-center gap-2 capitalize text-text font-bold;
+    }
+
+    &.active {
+      @apply bg-transparent;
+
+      & .city-name::after {
+        @apply absolute content-[""] top-[50%] right-[-15px] md:right-[-25px] translate-y-[-50%] w-3 h-3 md:w-5 md:h-5 bg-[url('../public/icons/plain.svg')] bg-cover bg-center bg-no-repeat;
+      }
+    }
+
+    .city-temp {
+      @apply text-white text-xl font-bold
+    }
+  }
+
+  .today-temp-container {
+    @apply grid grid-cols-3;
+
+    &.six-hours {
+      @apply md:grid-cols-6 gap-y-2
+    }
+
+    .temp-container {
+      @apply flex flex-col justify-between items-center gap-2 border-text-secondary border-r-2;
+
+      &:first-child {
+        @apply border-l-2;
+      }
+
+      .temp-hour {
+        @apply font-text text-text-secondary uppercase text-sm lg:text-sm;
+      }
+
+      & img {
+        @apply w-6 h-6
+      }
+
+      .temp {
+        @apply font-text text-text uppercase text-lg;
+      }
+    }
+  }
+
+  .forecast-day-container {
+    .day-container {
+      @apply flex items-center justify-between py-2 border-text-secondary border-b-2;
+
+      .day-conditions {
+        @apply flex gap-x-2;
+
+        & img {
+          @apply w-6 h-6;
+        }
+
+        & p {
+          @apply font-text text-text md:text-xl capitalize
+        }
+      }
+
+      .max-min-temp {
+        @apply flex;
+
+        .min-temp {
+          @apply font-text text-text-secondary md:text-lg;
+        }
+
+        .max-temp {
+          @apply font-text text-text md:text-xl ml-1;
+        }
+      }
+    }
+  }
+}
+
 @layer utilities {
+  h2 {
+    @apply text-sm md:text-xl font-bold;
+  }
+
+  h3 {
+    @apply text-sm text-text-secondary my-2 uppercase font-bold;
+  }
+
+  h4 {
+    @apply text-lg text-text-secondary;
+  }
+
   header {
-    & li {
-      @apply active:scale-75 transition-all duration-75 ease-linear;
+    & button {
+      @apply p-2 active:scale-75 transition-all duration-75 ease-linear;
 
       &.active {
         @apply rounded-lg outline outline-offset-2 outline-1 outline-text;
@@ -26,5 +132,7 @@
   svg {
     @apply text-text;
   }
+
+
 
 }

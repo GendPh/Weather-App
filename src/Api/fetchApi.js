@@ -1,7 +1,7 @@
 export const fetchApi = async (city) => {
   let url;
   let key = "4MQ77GY5MQQXVTABPTAXHQQBA";
-  url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}&//contentType=json`
+  /* url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}&//contentType=json` */
   const response = await fetch(url);
   if (!response.ok) {
     let localData = {

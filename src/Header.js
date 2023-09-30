@@ -1,10 +1,15 @@
 const navBar = document.querySelector("nav");
-const linksNavBar = navBar.querySelectorAll("ul li");
-linksNavBar.forEach(link => {
-  link.addEventListener("click", () => {
-    linksNavBar.forEach(li => {
+const buttonNavBar = navBar.querySelectorAll("button");
+const sectionContainer = document.querySelectorAll("section.container");
+buttonNavBar.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    buttonNavBar.forEach(li => {
       li.classList.remove("active");
     })
-    link.classList.add("active");
+    button.classList.add("active");
+    sectionContainer.forEach(section => {
+      section.classList.remove("active");
+    })
+    sectionContainer[index].classList.add("active");
   })
 });
